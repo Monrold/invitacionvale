@@ -1,11 +1,46 @@
 ---
 import '@fontsource/poly';
-import bgVale from "../images/bg-vale.png";
-import valeText from '../images/vale-text.svg';
+import XV from "../images/XV.svg";
+import bgOne from "../images/bg-one.png";
+import bgTwo from "../images/bg-two.png";
+import bgThree from "../images/valeBg.png";
+import bgFour from "../images/bgfour.png";
+import bgFive from "../images/bgfive.png";
+import liverpool from "../images/lverpool.png";
+import iconWhatsapp from "../images/whatsappicon.svg";
 ---
-<style define:vars={{bg:`url("${bgVale.src}")`}}>
+<style define:vars={{
+	bg:`url("${bgOne.src}")`,
+	bgtwo:`url("${bgTwo.src}")`,
+	bgthree:`url("${bgThree.src}")`,
+	bgfour:`url("${bgFour.src}")`,
+	bgfive: `url("${bgFive.src}")`,}}>
 .vale{
-	background-image: var(--bg);
+	background-image: var(--bg), linear-gradient(#F3A4A1, #FFC7C1);
+	background-size: cover;
+	background-position: center;
+}
+
+.bgtwo {
+	background-image: var(--bgtwo), linear-gradient(#FFC7C1,#F3A4A1);
+	background-size: cover;
+	background-position: center;
+}
+
+.bgthree {
+	background-image: var(--bgthree);
+	background-size: cover;
+	background-position: center;
+}
+
+.bgfour {
+	background-image: var(--bgfour), linear-gradient(#F3A4A1, #FFC7C1);
+	background-size: cover;
+	background-position: center;
+}
+
+.bgfive {
+	background-image: var(--bgfive), linear-gradient(#FFC7C1, #F3A4A1);
 	background-size: cover;
 	background-position: center;
 }
@@ -46,7 +81,11 @@ boton.addEventListener("click", () => {
 		<div class="overflow-y-scroll snap-y snap-mandatory sm:hidden">
 			<div class="h-screen">
 				<div class="vale w-screen h-screen snap-start snap-always flex flex-col justify-between py-4">
-					<img class="mx-auto py-4" src={valeText.src} alt="">
+					<h2 class="text-center text-white mt-4">Festeja conmigo</h2>
+					<div class="mx-auto">
+					<img class="" src={XV.src} alt="">
+					<h2 class="text-center text-white">Valentina</h2>
+				    </div>
 					<div class="flex flex-col items-center">
 					<h2 class="text-4xl text-white text-center">Mis XV años</h2>
 					<div class="bg-white px-6 py-4 rounded-lg flex">
@@ -64,9 +103,93 @@ boton.addEventListener("click", () => {
 					<audio src="audio.mp3"></audio>
 				    </div>
 				</div>
-				<div class="w-screen h-screen bg-red-900 snap-start snap-always"></div>
-				<div class="w-screen h-screen bg-yellow-800 snap-start snap-always"></div>
-				<div class="w-screen h-screen bg-purple-300 snap-start snap-always"></div>
+				<div class="bgtwo w-screen h-screen snap-start snap-always">
+					<div class="text-white text-center mx-8">
+					<div class="py-10">
+						<h2>HaceXV años me regalaron la vida y una gran familia</h2>
+					</div>
+					<div class="text-center py-10">
+						<h2 class="text-3xl">MIS PAPÁS</h2>
+						<h2>Mario A. Montaño Rodlan</h2>
+						<h2>Sonia Torres Campa</h2>
+				    </div>
+					<div class="text-center py-10">
+						<h2 class="text-3xl">MIS PADRINOS</h2>
+						<h2>Mario A. Montaño Rodlan</h2>
+						<h2>Sonia Torres Campa</h2>
+					</div>
+					<div class="text-center py-10">
+						<h2 class="text-3xl">DRESS CODE</h2>
+						<h2>De etiqueta. El color blush esta reservado para la festejada</h2>
+					</div>
+				    </div>
+				</div>
+				<div class="bgthree w-screen h-screen snap-start snap-always">
+				</div>
+				<div class="bgfour w-screen h-screen bg-purple-300 snap-start snap-always flex flex-col justify-center">
+					<div class="text-center text-white mx-8 py-10">
+						<div>
+							<h2 class="text-3xl">CREREMONÍA</h2>
+							<p>10 DE FEBRERO | 17 hrs</p>
+						</div>
+						<div class="pt-4 pb-4">
+							<p>Parroquia santa lima</p>
+							<p>Av. Tamaulipas 179, Hipódromo Condesa, Cuauhtémoc, 06170 Ciudad de México, CDMX.</p>
+						</div>
+						<a href="">
+							<div class="bg-[#B77976] w-full py-2 rounded-md">
+								<p>Ir desde maps</p>
+							</div>
+						</a>
+					</div>
+					<div class="text-center text-white mx-8 py-10">
+						<div>
+							<h2 class="text-3xl">RECEPCIÓN</h2>
+							<p>10 DE FEBRERO | 17 hrs</p>
+						</div>
+						<div class="pt-4 pb-4">
+							<p>Salón de eventos festejando</p>
+							<p>Av. Tamaulipas 179, Hipódromo Condesa, Cuauhtémoc, 06170 Ciudad de México, CDMX.</p>
+						</div>
+						<a href="">
+							<div class="bg-[#B77976] w-full py-2 rounded-md">
+								<p>Ir desde maps</p>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="bgfive w-screen h-screen bg-purple-300 snap-start snap-always flex flex-col justify-center">
+					<div class="text-center text-white mx-8 py-10">
+						<div>
+							<img class="mx-auto" src={liverpool.src} alt="">
+						</div>
+						<div class="pt-4 pb-4">
+							<p>No. de evento</p>
+							<p>12345678</p>
+						</div>
+						<a href="">
+							<div class="bg-[#B77976] w-full py-2 rounded-md">
+								<p>Ver mesa de regalos</p>
+							</div>
+						</a>
+					</div>
+					<div class="text-center text-white mx-8 py-10">
+						<div class="pt-4 pb-4 text-white">
+							<p>Para:</p>
+							<p class="text-4xl">Familia Torres</p>
+							<p>Esta invitación incluye</p>
+							<p class="text-[#754C4A]">5 boletos</p>
+							<div class="h-px bg-white my-6"></div>
+							<p class="my-6">Hay momentos en la vida que son especiales por si solos, compartirlos con las personas que quieres, los convierte en momentos inolvidables.</p>
+						</div>
+						<a href="">
+							<div class="border-[#764C4A] border-2 w-full py-2 rounded-md flex justify-center">
+								<img class="mr-2" src={iconWhatsapp.src} alt="">
+								<p class="text-[#764C4A]">Confirmar asistencia</p>
+							</div>
+						</a>
+					</div>
+				</div>
 			</div>
 		</div>	
 	</body>
