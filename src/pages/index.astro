@@ -1,5 +1,5 @@
 ---
-import '@fontsource/poly';
+import "@fontsource/poly";
 import XV from "../images/XV.svg";
 import bgOne from "../images/bg-one.png";
 import bgTwo from "../images/bg-two.png";
@@ -8,66 +8,52 @@ import bgFour from "../images/bgfour.png";
 import bgFive from "../images/bgfive.png";
 import liverpool from "../images/lverpool.png";
 import iconWhatsapp from "../images/whatsappicon.svg";
+import animation from "../images/json-audio.json";
 ---
-<style define:vars={{
-	bg:`url("${bgOne.src}")`,
-	bgtwo:`url("${bgTwo.src}")`,
-	bgthree:`url("${bgThree.src}")`,
-	bgfour:`url("${bgFour.src}")`,
-	bgfive: `url("${bgFive.src}")`,}}>
-.vale{
-	background-image: var(--bg), linear-gradient(#F3A4A1, #FFC7C1);
-	background-size: cover;
-	background-position: center;
-}
 
-.bgtwo {
-	background-image: var(--bgtwo), linear-gradient(#FFC7C1,#F3A4A1);
-	background-size: cover;
-	background-position: center;
-}
+<style
+	define:vars={{
+		bg: `url("${bgOne.src}")`,
+		bgtwo: `url("${bgTwo.src}")`,
+		bgthree: `url("${bgThree.src}")`,
+		bgfour: `url("${bgFour.src}")`,
+		bgfive: `url("${bgFive.src}")`,
+	}}
+>
+	.vale {
+		background-image: var(--bg), linear-gradient(#f3a4a1, #ffc7c1);
+		background-size: cover;
+		background-position: center;
+	}
 
-.bgthree {
-	background-image: var(--bgthree);
-	background-size: cover;
-	background-position: center;
-}
+	.bgtwo {
+		background-image: var(--bgtwo), linear-gradient(#ffc7c1, #f3a4a1);
+		background-size: cover;
+		background-position: center;
+	}
 
-.bgfour {
-	background-image: var(--bgfour), linear-gradient(#F3A4A1, #FFC7C1);
-	background-size: cover;
-	background-position: center;
-}
+	.bgthree {
+		background-image: var(--bgthree);
+		background-size: cover;
+		background-position: center;
+	}
 
-.bgfive {
-	background-image: var(--bgfive), linear-gradient(#FFC7C1, #F3A4A1);
-	background-size: cover;
-	background-position: center;
-}
+	.bgfour {
+		background-image: var(--bgfour), linear-gradient(#f3a4a1, #ffc7c1);
+		background-size: cover;
+		background-position: center;
+	}
 
-body{
-	font-family: 'poly';
-}
+	.bgfive {
+		background-image: var(--bgfive), linear-gradient(#ffc7c1, #f3a4a1);
+		background-size: cover;
+		background-position: center;
+	}
 
+	body {
+		font-family: "poly";
+	}
 </style>
-
-<script>
-	const boton = document.querySelector(".reproductor");
-const audioEtiqueta = document.querySelector("audio");
-
-boton.addEventListener("click", () => {
-  const playing = boton.getAttribute("data-playing");
-
-  if (!playing) {
-    audioEtiqueta.src = "https://pub-c6f56a3478ba4de7a25f81a088d063ba.r2.dev/redbone.mp3";
-    audioEtiqueta.play();
-    boton.setAttribute("data-playing", true);
-  } else {
-    audioEtiqueta.pause();
-    boton.setAttribute("data-playing", false);
-  }
-});
-</script>
 
 <html lang="en">
 	<head>
@@ -80,52 +66,105 @@ boton.addEventListener("click", () => {
 	<body>
 		<div class="overflow-y-scroll snap-y snap-mandatory sm:hidden">
 			<div class="h-screen">
-				<div class="vale w-screen h-screen snap-start snap-always flex flex-col justify-center py-4">
+				<div
+					class="vale w-screen h-screen snap-start snap-always flex flex-col justify-center py-4"
+				>
 					<h2 class="text-center text-white mt-4">Festeja conmigo</h2>
 					<div class="mx-auto py-44">
-					<img class="" src={XV.src} alt="">
-					<h2 class="text-center text-white">Valentina</h2>
-				    </div>
-					<div class="flex flex-col items-center">
-					<div class="bg-white px-6 py-4 rounded-lg flex">
-					<button class="reproductor">
-						<svg xmlns="http://www.w3.org/2000/svg" class="play" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/>
-						</svg>
-					</button>
-					<div class="w-px bg-black ml-3">
+						<img class="" src={XV.src} alt="" />
+						<h2 class="text-center text-white text-2xl">Valentina</h2>
 					</div>
-					<div class="ml-2">
-					<h3>Redbone</h3>
-					<p class="text-xs text-gray-500">Childish Gambino</p>
+					<div>
+						<script>
+							function counter(){
+							  let targetDate = new Date('2024-02-10T00:00:00'); // Establece la fecha y hora objetivo
+							  let interval = setInterval(function(){
+								let currentDate = new Date();
+								let timeDifference = targetDate - currentDate;
+								
+								if (timeDifference <= 0) {
+								  clearInterval(interval);
+								  document.getElementById("countdown-days").textContent = "00";
+								  document.getElementById("countdown-hours").textContent = "00";
+								  document.getElementById("countdown-minutes").textContent = "00";
+								  document.getElementById("countdown-seconds").textContent = "00";
+								  return;
+								}
+						  
+								let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+								timeDifference -= days * (1000 * 60 * 60 * 24);
+								let hours = Math.floor(timeDifference / (1000 * 60 * 60));
+								timeDifference -= hours * (1000 * 60 * 60);
+								let minutes = Math.floor(timeDifference / (1000 * 60));
+								timeDifference -= minutes * (1000 * 60);
+								let seconds = Math.floor(timeDifference / 1000);
+						  
+								document.getElementById("countdown-days").textContent = days.toString().padStart(2, '0');
+								document.getElementById("countdown-hours").textContent = hours.toString().padStart(2, '0');
+								document.getElementById("countdown-minutes").textContent = minutes.toString().padStart(2, '0');
+								document.getElementById("countdown-seconds").textContent = seconds.toString().padStart(2, '0');
+							  }, 1000);
+							}
+						  
+							document.addEventListener("DOMContentLoaded", function() {
+							  counter();
+							});
+						  </script>
+						  <div>
+							<p class="text-white text-center my-2">10 de febrero</p>
+						  </div>
+						  <div class="flex justify-center">
+							<div class="mx-4 ">
+							<p id="countdown-days" class="countdown-item text-white text-4xl">00</p>
+							<p class="text-white text-center pt-2">Días</p>
+						    </div>
+							<div class="mx-4 ">
+							<p id="countdown-hours" class="countdown-item text-white text-4xl">00</p>
+							<p class="text-white text-center pt-2">Hrs</p>
+						    </div>
+							<div class="mx-4">
+							<p id="countdown-minutes" class="countdown-item text-white text-4xl">00</p>
+							<p class="text-white text-center pt-2">Min</p>
+							</div>
+							<div class="mx-4 ">
+							<p id="countdown-seconds" class="countdown-item text-white text-4xl">00</p>
+							<p class="text-white text-center pt-2">Seg</p>
+							</div>
+						  </div>
 					</div>
-					</div>
-					<audio src="audio.mp3"></audio>
-				    </div>
 				</div>
 				<div class="bgtwo w-screen h-screen snap-start snap-always">
 					<div class="text-white text-center mx-8">
-					<div class="py-10">
-						<h2>Hace XV años me regalaron la vida y una gran familia</h2>
+						<div class="py-10">
+							<h2>
+								Hace XV años me regalaron la vida y una gran
+								familia
+							</h2>
+						</div>
+						<div class="text-center py-10">
+							<h2 class="text-3xl">MIS PAPÁS</h2>
+							<h2>Mario A. Montaño Roldan</h2>
+							<h2>Sonia Torres Campa</h2>
+						</div>
+						<div class="text-center py-10">
+							<h2 class="text-3xl">MIS PADRINOS</h2>
+							<h2>Mario A. Montaño Roldan</h2>
+							<h2>Sonia Torres Campa</h2>
+						</div>
+						<div class="text-center py-10">
+							<h2 class="text-3xl">DRESS CODE</h2>
+							<h2>
+								De etiqueta. El color blush esta reservado para
+								la festejada
+							</h2>
+						</div>
 					</div>
-					<div class="text-center py-10">
-						<h2 class="text-3xl">MIS PAPÁS</h2>
-						<h2>Mario A. Montaño Roldan</h2>
-						<h2>Sonia Torres Campa</h2>
-				    </div>
-					<div class="text-center py-10">
-						<h2 class="text-3xl">MIS PADRINOS</h2>
-						<h2>Mario A. Montaño Roldan</h2>
-						<h2>Sonia Torres Campa</h2>
-					</div>
-					<div class="text-center py-10">
-						<h2 class="text-3xl">DRESS CODE</h2>
-						<h2>De etiqueta. El color blush esta reservado para la festejada</h2>
-					</div>
-				    </div>
 				</div>
 				<div class="bgthree w-screen h-screen snap-start snap-always">
 				</div>
-				<div class="bgfour w-screen h-screen bg-purple-300 snap-start snap-always flex flex-col justify-center">
+				<div
+					class="bgfour w-screen h-screen bg-purple-300 snap-start snap-always flex flex-col justify-center"
+				>
 					<div class="text-center text-white mx-8 py-10">
 						<div>
 							<h2 class="text-3xl">CEREMONÍA</h2>
@@ -133,7 +172,10 @@ boton.addEventListener("click", () => {
 						</div>
 						<div class="pt-4 pb-4">
 							<p>Parroquia santa lima</p>
-							<p>Av. Tamaulipas 179, Hipódromo Condesa, Cuauhtémoc, 06170 Ciudad de México, CDMX.</p>
+							<p>
+								Av. Tamaulipas 179, Hipódromo Condesa,
+								Cuauhtémoc, 06170 Ciudad de México, CDMX.
+							</p>
 						</div>
 						<a href="">
 							<div class="bg-[#B77976] w-full py-2 rounded-md">
@@ -148,7 +190,10 @@ boton.addEventListener("click", () => {
 						</div>
 						<div class="pt-4 pb-4">
 							<p>Salón de eventos festejando</p>
-							<p>Av. Tamaulipas 179, Hipódromo Condesa, Cuauhtémoc, 06170 Ciudad de México, CDMX.</p>
+							<p>
+								Av. Tamaulipas 179, Hipódromo Condesa,
+								Cuauhtémoc, 06170 Ciudad de México, CDMX.
+							</p>
 						</div>
 						<a href="">
 							<div class="bg-[#B77976] w-full py-2 rounded-md">
@@ -157,10 +202,12 @@ boton.addEventListener("click", () => {
 						</a>
 					</div>
 				</div>
-				<div class="bgfive w-screen h-screen bg-purple-300 snap-start snap-always flex flex-col justify-center">
+				<div
+					class="bgfive w-screen h-screen bg-purple-300 snap-start snap-always flex flex-col justify-center"
+				>
 					<div class="text-center text-white mx-8 py-10">
 						<div>
-							<img class="mx-auto" src={liverpool.src} alt="">
+							<img class="mx-auto" src={liverpool.src} alt="" />
 						</div>
 						<div class="pt-4 pb-4">
 							<p>No. de evento</p>
@@ -179,17 +226,29 @@ boton.addEventListener("click", () => {
 							<p>Esta invitación incluye</p>
 							<p class="text-[#754C4A]">5 boletos</p>
 							<div class="h-px bg-white my-6"></div>
-							<p class="my-6">Hay momentos en la vida que son especiales por si solos, compartirlos con las personas que quieres, los convierte en momentos inolvidables.</p>
+							<p class="my-6">
+								Hay momentos en la vida que son especiales por
+								si solos, compartirlos con las personas que
+								quieres, los convierte en momentos inolvidables.
+							</p>
 						</div>
 						<a class="pb-4" href="">
-							<div class="border-[#764C4A] border-2 w-full py-2 rounded-md flex justify-center">
-								<img class="mr-2" src={iconWhatsapp.src} alt="">
-								<p class="text-[#764C4A]">Confirmar asistencia</p>
+							<div
+								class="border-[#764C4A] border-2 w-full py-2 rounded-md flex justify-center"
+							>
+								<img
+									class="mr-2"
+									src={iconWhatsapp.src}
+									alt=""
+								/>
+								<p class="text-[#764C4A]">
+									Confirmar asistencia
+								</p>
 							</div>
 						</a>
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 	</body>
-	</html>
+</html>
