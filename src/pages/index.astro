@@ -2,18 +2,18 @@
 import "@fontsource/poly";
 import XV from "../images/XV.svg";
 import bgOne from "../images/bg-one.png";
+import bgOnesvg from "../images/bg-one.svg";
 import bgTwo from "../images/bg-two.png";
 import bgThree from "../images/valeBg.png";
 import bgFour from "../images/bgfour.png";
 import bgFive from "../images/bgfive.png";
 import liverpool from "../images/lverpool.png";
 import iconWhatsapp from "../images/whatsappicon.svg";
-import animation from "../images/json-audio.json";
 ---
 
 <style
 	define:vars={{
-		bg: `url("${bgOne.src}")`,
+		bg: `url("${bgOnesvg.src}")`,
 		bgtwo: `url("${bgTwo.src}")`,
 		bgthree: `url("${bgThree.src}")`,
 		bgfour: `url("${bgFour.src}")`,
@@ -64,7 +64,7 @@ import animation from "../images/json-audio.json";
 		<title>Astro</title>
 	</head>
 	<body>
-		<div class="">
+		<div class="overflow-y-scroll snap-y snap-mandatory sm:hidden">
 			<div class="h-screen">
 				<div
 					class="vale w-screen h-screen snap-start snap-always flex flex-col justify-center py-4"
