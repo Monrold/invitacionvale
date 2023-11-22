@@ -32,7 +32,7 @@ import ogImage from "../images/og-image-vale.png";
     top: 0;
     width: 100vw;
     height: 100vh;
-    z-index: -1;
+    z-index: -2;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), var(--bg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -55,6 +55,21 @@ import ogImage from "../images/og-image-vale.png";
 		background-size: cover;
 		background-position: center;
 		z-index: 2;
+	}
+
+	.bgthree::before{
+		content: "";
+		position: fixed;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		z-index: -1;
+		background: var(--bgthree);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		transform: translateZ(0);
+		backface-visibility: hidden;
 	}
 
 	
