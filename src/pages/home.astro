@@ -23,11 +23,20 @@ import ogImage from "../images/og-image-vale.png";
 	}}
 >
 	.vale {
-		background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)),var(--bg);
-		background-size: cover;
-		background-position: center;
-		background-attachment: fixed;
+		position: relative;
 	}
+	.vale::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), var(--bg);
+    background-size: cover;
+    background-position: center;
+}
 
 	.bgtwo {
 		background-image: var(--bgtwo), linear-gradient(#ffc7c1, #f3a4a1);
