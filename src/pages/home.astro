@@ -28,7 +28,7 @@ import ogImage from "../images/og-image-vale.png";
 	}
 	.vale::before {
     content: "";
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100vw;
     height: 100vh;
@@ -49,9 +49,11 @@ import ogImage from "../images/og-image-vale.png";
 	}
 
 	.bgthree {
+		position: relative;
 		background-image: var(--bgthree);
 		background-size: cover;
 		background-position: center;
+		z-index: 2;
 	}
 
 	
