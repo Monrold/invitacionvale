@@ -1,10 +1,11 @@
 ---
 import "@fontsource/poly";
 import XV from "../images/XV.svg";
-import bgOneO from "../images/bg-one.png";
+import bgOneO from "../images/valeBg.png";
 import bgTwo from "../images/bg-two.png";
-import bgThree from "../images/valeBg.png";
+import bgThree from "../images/valentina-images-1.png";
 import bgFour from "../images/bgfour.png";
+import bgMidle from "../images/valentina-images-4.png";
 import bgFive from "../images/bgfive.png";
 import liverpool from "../images/lverpool.png";
 import iconWhatsapp from "../images/whatsappicon.svg";
@@ -16,14 +17,16 @@ import ogImage from "../images/og-image-vale.png";
 		bg: `url("${bgOneO.src}")`,
 		bgtwo: `url("${bgTwo.src}")`,
 		bgthree: `url("${bgThree.src}")`,
+		bgmidle: `url("${bgMidle.src}")`,
 		bgfour: `url("${bgFour.src}")`,
 		bgfive: `url("${bgFive.src}")`,
 	}}
 >
 	.vale {
-		background-image: var(--bg), linear-gradient(#f3a4a1, #ffc7c1);
+		background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.7)),var(--bg);
 		background-size: cover;
 		background-position: center;
+		background-attachment: fixed;
 	}
 
 	.bgtwo {
@@ -36,6 +39,13 @@ import ogImage from "../images/og-image-vale.png";
 		background-image: var(--bgthree);
 		background-size: cover;
 		background-position: center;
+		background-attachment: fixed;
+	}
+	.bgmidle{
+		background-image: var(--bgmidle);
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
 	}
 
 	.bgfour {
@@ -66,8 +76,6 @@ import ogImage from "../images/og-image-vale.png";
 		<title>Los XV de Vale</title>
 	</head>
 	<body>
-		<div class="overflow-y-scroll snap-y snap-mandatory sm:hidden">
-			<div class="h-screen">
 				<div
 					class="vale w-screen h-[90vh] snap-start snap-always flex flex-col justify-center py-4"
 				>
@@ -135,25 +143,25 @@ import ogImage from "../images/og-image-vale.png";
 						  </div>
 					</div>
 				</div>
-				<div class="bgtwo w-screen h-screen snap-start snap-always">
+				<div class="bgtwo w-screen h-auto snap-start snap-always">
 					<div class="text-white text-center mx-8">
-						<div class="py-10">
+						<div class="pb-5 pt-10">
 							<h2>
 								Hace XV años me regalaron la vida y una gran
 								familia
 							</h2>
 						</div>
-						<div class="text-center py-10">
+						<div class="text-center py-5">
 							<h2 class="text-3xl">MIS PAPÁS</h2>
 							<h2>Mario A. Montaño Roldan</h2>
 							<h2>Sonia Torres Campa</h2>
 						</div>
-						<div class="text-center py-10">
+						<div class="text-center py-5">
 							<h2 class="text-3xl">MIS PADRINOS</h2>
 							<h2>Mario A. Montaño Roldan</h2>
 							<h2>Sonia Torres Campa</h2>
 						</div>
-						<div class="text-center py-10">
+						<div class="text-center pt-5 pb-10">
 							<h2 class="text-3xl">DRESS CODE</h2>
 							<h2>
 								De etiqueta. El color blush esta reservado para
@@ -162,7 +170,8 @@ import ogImage from "../images/og-image-vale.png";
 						</div>
 					</div>
 				</div>
-				<div class="bgthree w-screen h-screen snap-start snap-always">
+				<div class="bgthree w-screen h-[60vh] snap-start snap-always">
+					<img src={} alt="">
 				</div>
 				<div
 					class="bgfour w-screen h-screen bg-purple-300 snap-start snap-always flex flex-col justify-center"
@@ -204,10 +213,13 @@ import ogImage from "../images/og-image-vale.png";
 						</a>
 					</div>
 				</div>
+				<div class="bgmidle w-screen h-[60vh]">
+					
+				</div>
 				<div
-					class="bgfive w-screen h-screen bg-purple-300 snap-start snap-always flex flex-col justify-center"
+					class="bgfive w-screen h-screen bg-purple-300 snap-start snap-always flex flex-col"
 				>
-					<div class="text-center text-white mx-8 py-10">
+					<div class="text-center text-white mx-8 pb-5 pt-10">
 						<div>
 							<img class="mx-auto" src={liverpool.src} alt="" />
 						</div>
@@ -221,7 +233,7 @@ import ogImage from "../images/og-image-vale.png";
 							</div>
 						</a>
 					</div>
-					<div class="text-center text-white mx-8 py-10">
+					<div class="text-center text-white mx-8 py-5">
 						<div class="pt-4 pb-4 text-white">
 							<p>Para:</p>
 							<p class="text-4xl">Familia Torres</p>
@@ -250,7 +262,5 @@ import ogImage from "../images/og-image-vale.png";
 						</a>
 					</div>
 				</div>
-			</div>
-		</div>
 	</body>
 </html>
