@@ -24,11 +24,12 @@ import ogImage from "../images/og-image-vale.png";
 >
 	.contain{
 		position: relative;
-		height: 500vh;
+		height: 300vh;
 	}
 	.vale {
 		position: sticky;
 		top: 0;
+		bottom: 10;
 		background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), var(--bg);
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -45,7 +46,7 @@ import ogImage from "../images/og-image-vale.png";
 		background-image: var(--bgtwo), linear-gradient(#ffc7c1, #f3a4a1);
 		background-size: cover;
 		background-position: center;
-		z-index: 1;
+		z-index: 2;
 	}
 
 	.bgthree {
@@ -64,9 +65,17 @@ import ogImage from "../images/og-image-vale.png";
 
 	
 	.bgmidle{
-		background-image: var(--bgmidle);
+		position: sticky;
+		top: 0;
+		background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), var(--bgmidle);
 		background-size: cover;
+		background-repeat: no-repeat;
 		background-position: center;
+		transform: translateZ(0);
+		backface-visibility: hidden;
+		width: 100%;
+		height: 50vh;
+		z-index: -1;
 	}
 
 	.bgfour {
@@ -97,6 +106,10 @@ import ogImage from "../images/og-image-vale.png";
 		<title>Los XV de Vale</title>
 	</head>
 	<body>
+		<div class="hidden sm:flex sm:justify-center sm:items-center sm:h-screen">
+			<p>Esta invitación sólo esta disponible para dispositivos móviles</p>
+		</div>
+		<div class="sm:hidden">
 			<div class="contain">
 				<div class="vale">
 					<div
@@ -144,7 +157,7 @@ import ogImage from "../images/og-image-vale.png";
 								});
 							</script>
 							<div>
-								<p class="text-white text-center my-2">10 de febrero</p>
+								<p class="text-white text-center my-2">10 de febrero del 2024</p>
 							</div>
 							<div class="flex justify-center">
 								<div class="mx-4 ">
@@ -167,7 +180,7 @@ import ogImage from "../images/og-image-vale.png";
 						</div>
 					</div>
 				</div>
-				<div class="bgtwo w-screen h-auto snap-start snap-always">
+				<div class="bgtwo w-screen h-[80vh] snap-start snap-always">
 					<div class="text-white text-center mx-8">
 						<div class="pb-5 pt-10">
 							<h2>
@@ -182,8 +195,8 @@ import ogImage from "../images/og-image-vale.png";
 						</div>
 						<div class="text-center py-5">
 							<h2 class="text-3xl">MIS PADRINOS</h2>
-							<h2>Mario A. Montaño Roldan</h2>
-							<h2>Sonia Torres Campa</h2>
+							<h2>Jorge Roldan Rosillo</h2>
+							<h2>Mariana Contreras Castro</h2>
 						</div>
 						<div class="text-center pt-5 pb-10">
 							<h2 class="text-3xl">DRESS CODE</h2>
@@ -194,8 +207,8 @@ import ogImage from "../images/og-image-vale.png";
 						</div>
 					</div>
 				</div>
-				<div>
-					<div class="bgthree  snap-start snap-always">
+				<div class="bgthree">
+					<div class="snap-start snap-always">
 						<img src={} alt="">
 					</div>
 				</div>
@@ -205,16 +218,15 @@ import ogImage from "../images/og-image-vale.png";
 					<div class="text-center text-white mx-8 py-10">
 						<div>
 							<h2 class="text-3xl">CEREMONÍA</h2>
-							<p>10 DE FEBRERO | 17 hrs</p>
+							<p>10 DE FEBRERO | 13:30 hrs</p>
 						</div>
 						<div class="pt-4 pb-4">
 							<p>Parroquia santa lima</p>
 							<p>
-								Av. Tamaulipas 179, Hipódromo Condesa,
-								Cuauhtémoc, 06170 Ciudad de México, CDMX.
+								Parroquia Santa Cruz, plaza Felipe Villanueva s/n Tecámac C.P: 55740
 							</p>
 						</div>
-						<a href="">
+						<a href="https://maps.app.goo.gl/aMrTqSRUf8b3f5ut5">
 							<div class="bg-[#B77976] w-full py-2 rounded-md">
 								<p>Ir desde maps</p>
 							</div>
@@ -223,27 +235,26 @@ import ogImage from "../images/og-image-vale.png";
 					<div class="text-center text-white mx-8 py-10">
 						<div>
 							<h2 class="text-3xl">RECEPCIÓN</h2>
-							<p>10 DE FEBRERO | 17 hrs</p>
+							<p>10 DE FEBRERO | 15:00 hrs</p>
 						</div>
 						<div class="pt-4 pb-4">
 							<p>Salón de eventos festejando</p>
 							<p>
-								Av. Tamaulipas 179, Hipódromo Condesa,
-								Cuauhtémoc, 06170 Ciudad de México, CDMX.
+								Salon de fiestas Katsa en Calle Aldama sin número entre calle Abasolo y Diana Laura Tecámac Estado de México. Cp 55740. 
 							</p>
 						</div>
-						<a href="">
+						<a href="https://maps.app.goo.gl/dTaMMEJmnAiDfJC29">
 							<div class="bg-[#B77976] w-full py-2 rounded-md">
 								<p>Ir desde maps</p>
 							</div>
 						</a>
 					</div>
 				</div>
-				<div class="bgmidle w-screen ">
+				<div class="bgmidle">
 					
 				</div>
 				<div
-					class="bgfive w-screen h-screen bg-purple-300 snap-start snap-always flex flex-col"
+					class="bgfive w-screen  bg-purple-300 snap-start snap-always flex flex-col"
 				>
 					<div class="text-center text-white mx-8 pb-5 pt-10">
 						<div>
@@ -251,7 +262,7 @@ import ogImage from "../images/og-image-vale.png";
 						</div>
 						<div class="pt-4 pb-4">
 							<p>No. de evento</p>
-							<p>12345678</p>
+							<p>51327990</p>
 						</div>
 						<a href="">
 							<div class="bg-[#B77976] w-full py-2 rounded-md">
@@ -259,12 +270,10 @@ import ogImage from "../images/og-image-vale.png";
 							</div>
 						</a>
 					</div>
-					<div class="text-center text-white mx-8 py-5">
+					<div class="text-center text-white mx-8 pb-10 pt-5 ">
 						<div class="pt-4 pb-4 text-white">
-							<p>Para:</p>
-							<p class="text-4xl">Familia Torres</p>
-							<p>Esta invitación incluye</p>
-							<p class="text-[#754C4A]">5 boletos</p>
+							<p class="text-2xl">Esta invitación incluye</p>
+							<p class="text-[#754C4A] text-2xl">5 boletos</p>
 							<div class="h-px bg-white my-6"></div>
 							<p class="my-6">
 								Hay momentos en la vida que son especiales por
@@ -272,7 +281,7 @@ import ogImage from "../images/og-image-vale.png";
 								quieres, los convierte en momentos inolvidables.
 							</p>
 						</div>
-						<a class="pb-4" href="">
+						<a class="pb-4" href="https://wa.link/j5wnbm">
 							<div
 								class="border-[#764C4A] border-2 w-full py-2 rounded-md flex justify-center"
 							>
@@ -289,5 +298,6 @@ import ogImage from "../images/og-image-vale.png";
 					</div>
 				</div>
 			</div>
+		</div>
 	</body>
 </html>
