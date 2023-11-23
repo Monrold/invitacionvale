@@ -51,7 +51,7 @@ import ogImage from "../images/og-image-vale.png";
 
 	.bgthree {
 		position: sticky;
-		top: 0;
+		top: 10px;
 		background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), var(--bgthree);
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -79,9 +79,12 @@ import ogImage from "../images/og-image-vale.png";
 	}
 
 	.bgfour {
+		position: relative;
 		background-image: var(--bgfour), linear-gradient(#f3a4a1, #ffc7c1);
 		background-size: cover;
 		background-position: center;
+		z-index: 3;
+
 	}
 
 	.bgfive {
