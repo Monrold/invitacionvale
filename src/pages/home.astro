@@ -23,9 +23,9 @@ import ogImage from "../images/og-image-vale.png";
 		bgfive: `url("${bgFive.src}")`,
 	}}
 >
-	.contain{
+	.containone{
 		position: relative;
-		height: 300vh;
+		height: 150vh;
 	}
 	.vale {
 		position: sticky;
@@ -53,7 +53,10 @@ import ogImage from "../images/og-image-vale.png";
 		flex-direction: column;
 		justify-content: center;
 	}
-
+	.containtwo{
+		position: relative;
+		height: 150vh;
+	}
 	.bgthree {
 		position: sticky;
 		top: 0;
@@ -122,7 +125,7 @@ import ogImage from "../images/og-image-vale.png";
 			<p>Esta invitación sólo esta disponible para dispositivos móviles</p>
 		</div>
 		<div class="sm:hidden">
-			<div class="contain">
+			<div class="containone">
 				<div class="vale">
 					<div
 						class="snap-start snap-always flex flex-col justify-center py-4"
@@ -219,6 +222,8 @@ import ogImage from "../images/og-image-vale.png";
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="containtwo">
 				<div class="bgthree">
 					<div class="snap-start snap-always">
 						<img src={} alt="">
@@ -262,6 +267,7 @@ import ogImage from "../images/og-image-vale.png";
 						</a>
 					</div>
 				</div>
+			</div>
 				<div class="bgmidle">
 					
 				</div>
@@ -309,7 +315,6 @@ import ogImage from "../images/og-image-vale.png";
 						</a>
 					</div>
 				</div>
-			</div>
 		</div>
 	</body>
 </html>
