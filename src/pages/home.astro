@@ -30,8 +30,8 @@ import ogImage from "../images/og-image-vale.png";
     content: "";
     position: fixed;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     z-index: -2;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), var(--bg);
 	background-size: cover;
@@ -51,25 +51,23 @@ import ogImage from "../images/og-image-vale.png";
 
 	.bgthree {
 		position: relative;
-		background-image: var(--bgthree);
-		background-size: cover;
-		background-position: center;
-		z-index: 2;
+		height: 40vh;
 	}
 
 	.bgthree::before{
 		content: "";
 		position: fixed;
+		margin-top: 500px;
 		top: 0;
-		width: 100vw;
-		height: 100vh;
+		width: 100%;
+		height: 100%;
 		z-index: -1;
 		background: var(--bgthree);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
 		transform: translateZ(0);
-		backface-visibility: hidden;
+
 	}
 
 	
@@ -107,6 +105,7 @@ import ogImage from "../images/og-image-vale.png";
 		<title>Los XV de Vale</title>
 	</head>
 	<body>
+			<div>
 				<div
 					class="vale snap-start snap-always flex flex-col justify-center py-4"
 				>
@@ -174,6 +173,7 @@ import ogImage from "../images/og-image-vale.png";
 						  </div>
 					</div>
 				</div>
+			</div>
 				<div class="bgtwo w-screen h-auto snap-start snap-always">
 					<div class="text-white text-center mx-8">
 						<div class="pb-5 pt-10">
@@ -201,9 +201,11 @@ import ogImage from "../images/og-image-vale.png";
 						</div>
 					</div>
 				</div>
-				<div class="bgthree w-screen h-[60vh] snap-start snap-always">
+			<div>
+				<div class="bgthree  snap-start snap-always">
 					<img src={} alt="">
 				</div>
+			</div>
 				<div
 					class="bgfour w-screen h-screen bg-purple-300 snap-start snap-always flex flex-col justify-center"
 				>
@@ -244,7 +246,7 @@ import ogImage from "../images/og-image-vale.png";
 						</a>
 					</div>
 				</div>
-				<div class="bgmidle w-screen h-[60vh]">
+				<div class="bgmidle w-screen ">
 					
 				</div>
 				<div
