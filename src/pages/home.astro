@@ -53,14 +53,11 @@ import ogImage from "../images/og-image-vale.png";
 		flex-direction: column;
 		justify-content: center;
 	}
-	.containtwo{
-		position: relative;
-		height: 150vh;
-	}
+	
 	.bgthree {
 		position: relative;
 		top: 0;
-		background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), var(--bgthree);
+		background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), var(--bgthree);
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: bottom;
@@ -72,19 +69,7 @@ import ogImage from "../images/og-image-vale.png";
 	}
 
 	
-	.bgmidle{
-		position: relative;
-		top: 0;
-		background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), var(--bgmidle);
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: center;
-		transform: translateZ(0);
-		backface-visibility: hidden;
-		width: 100%;
-		height: 50vh;
-		z-index: -1;
-	}
+
 
 	.bgfour {
 		position: relative;
@@ -268,9 +253,13 @@ import ogImage from "../images/og-image-vale.png";
 					</div>
 				</div>
 			</div>
-				<div class="bgmidle">
-					
-				</div>
+			<div class="containthree">
+			<div>
+				<video preload="auto" muted autoplay loop  playsinline>
+					<source src="https://pub-c6f56a3478ba4de7a25f81a088d063ba.r2.dev/valentina.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
 				<div
 					class="bgfive w-screen  bg-purple-300 snap-start snap-always flex flex-col"
 				>
@@ -315,6 +304,7 @@ import ogImage from "../images/og-image-vale.png";
 						</a>
 					</div>
 				</div>
+
 		</div>
 	</body>
 </html>
