@@ -1,5 +1,6 @@
 ---
 import "@fontsource/poly";
+import "@fontsource/great-vibes";
 import XV from "../images/XV.svg";
 import bgOneO from "../images/valeBg.png";
 import bgTwo from "../images/bg-two.png";
@@ -37,11 +38,12 @@ import ogImage from "../images/og-image-vale.png";
 		transform: translateZ(0);
 		backface-visibility: hidden;
 		width: 100%;
-		height: 80vh;
+		height: 100vh;
 		z-index: -2;
 		}
 
 	.bgtwo {
+		height: 90vh;
 		position: relative;
 		background-image: var(--bgtwo), linear-gradient(#ffc7c1, #f3a4a1);
 		background-size: cover;
@@ -51,7 +53,7 @@ import ogImage from "../images/og-image-vale.png";
 
 	.bgthree {
 		position: sticky;
-		top: 10px;
+		top: 0;
 		background: linear-gradient(transparent, rgba(0, 0, 0, 0.7)), var(--bgthree);
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -59,7 +61,7 @@ import ogImage from "../images/og-image-vale.png";
 		transform: translateZ(0);
 		backface-visibility: hidden;
 		width: 100%;
-		height: 50vh;
+		height: 60vh;
 		z-index: -1;
 	}
 
@@ -79,6 +81,7 @@ import ogImage from "../images/og-image-vale.png";
 	}
 
 	.bgfour {
+		height: 120vh;
 		position: relative;
 		background-image: var(--bgfour), linear-gradient(#f3a4a1, #ffc7c1);
 		background-size: cover;
@@ -95,6 +98,10 @@ import ogImage from "../images/og-image-vale.png";
 
 	body {
 		font-family: "poly";
+	}
+
+	.greatvives{
+		font-family: 'Great Vibes', sans-serif;
 	}
 </style>
 
@@ -183,8 +190,8 @@ import ogImage from "../images/og-image-vale.png";
 						</div>
 					</div>
 				</div>
-				<div class="bgtwo w-screen h-[80vh] snap-start snap-always">
-					<div class="text-white text-center mx-8">
+				<div class="bgtwo w-screen snap-start snap-always">
+					<div class="text-white text-center flex- flex-col justify-center mx-8">
 						<div class="pb-5 pt-10">
 							<h2>
 								Hace XV años me regalaron la vida y una gran
@@ -192,17 +199,17 @@ import ogImage from "../images/og-image-vale.png";
 							</h2>
 						</div>
 						<div class="text-center py-5">
-							<h2 class="text-3xl">MIS PAPÁS</h2>
+							<h2 class="text-3xl greatvives">Mis papás</h2>
 							<h2>Mario A. Montaño Roldan</h2>
 							<h2>Sonia Torres Campa</h2>
 						</div>
 						<div class="text-center py-5">
-							<h2 class="text-3xl">MIS PADRINOS</h2>
+							<h2 class="text-3xl greatvives">Mis padrinos</h2>
 							<h2>Jorge Roldan Rosillo</h2>
 							<h2>Mariana Contreras Castro</h2>
 						</div>
 						<div class="text-center pt-5 pb-10">
-							<h2 class="text-3xl">DRESS CODE</h2>
+							<h2 class="text-3xl greatvives">Dress code</h2>
 							<h2>
 								De etiqueta. El color blush esta reservado para
 								la festejada
@@ -220,7 +227,7 @@ import ogImage from "../images/og-image-vale.png";
 				>
 					<div class="text-center text-white mx-8 py-10">
 						<div>
-							<h2 class="text-3xl">CEREMONÍA</h2>
+							<h2 class="text-5xl greatvives">Ceremonía</h2>
 							<p>10 DE FEBRERO | 13:30 hrs</p>
 						</div>
 						<div class="pt-4 pb-4">
@@ -237,7 +244,7 @@ import ogImage from "../images/og-image-vale.png";
 					</div>
 					<div class="text-center text-white mx-8 py-10">
 						<div>
-							<h2 class="text-3xl">RECEPCIÓN</h2>
+							<h2 class="text-5xl greatvives">Recepción</h2>
 							<p>10 DE FEBRERO | 15:00 hrs</p>
 						</div>
 						<div class="pt-4 pb-4">
@@ -267,7 +274,7 @@ import ogImage from "../images/og-image-vale.png";
 							<p>No. de evento</p>
 							<p>51327990</p>
 						</div>
-						<a href="">
+						<a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51327990">
 							<div class="bg-[#B77976] w-full py-2 rounded-md">
 								<p>Ver mesa de regalos</p>
 							</div>
