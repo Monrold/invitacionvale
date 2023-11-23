@@ -38,17 +38,20 @@ import ogImage from "../images/og-image-vale.png";
 		transform: translateZ(0);
 		backface-visibility: hidden;
 		width: 100%;
-		height: 100vh;
+		height: 80vh;
 		z-index: -2;
 		}
 
 	.bgtwo {
-		height: 90vh;
+		height: 80vh;
 		position: relative;
 		background-image: var(--bgtwo), linear-gradient(#ffc7c1, #f3a4a1);
 		background-size: cover;
 		background-position: center;
 		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	.bgthree {
@@ -81,7 +84,6 @@ import ogImage from "../images/og-image-vale.png";
 	}
 
 	.bgfour {
-		height: 120vh;
 		position: relative;
 		background-image: var(--bgfour), linear-gradient(#f3a4a1, #ffc7c1);
 		background-size: cover;
@@ -190,8 +192,8 @@ import ogImage from "../images/og-image-vale.png";
 						</div>
 					</div>
 				</div>
-				<div class="bgtwo w-screen snap-start snap-always">
-					<div class="text-white text-center flex- flex-col justify-center mx-8">
+				<div class="bgtwo w-screen">
+					<div class="text-white text-center mx-8 bgtwoone">
 						<div class="pb-5 pt-10">
 							<h2>
 								Hace XV años me regalaron la vida y una gran
