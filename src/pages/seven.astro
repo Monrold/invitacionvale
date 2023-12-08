@@ -1,0 +1,303 @@
+---
+import "@fontsource/poly";
+import "@fontsource/great-vibes";
+import XV from "../images/XV.svg";
+import bgOneO from "../images/valeBg.png";
+import bgTwo from "../images/bg-two.png";
+import bgThree from "../images/valentina-images-1.png";
+import bgFour from "../images/bgfour.png";
+import bgMidle from "../images/valentina-images-4.png";
+import bgFive from "../images/bgfive.png";
+import liverpool from "../images/lverpool.png";
+import iconWhatsapp from "../images/whatsappicon.svg";
+import ogImage from "../images/og-image-vale.png";
+---
+
+<style
+	define:vars={{
+		bg: `url("${bgOneO.src}")`,
+		bgtwo: `url("${bgTwo.src}")`,
+		bgthree: `url("${bgThree.src}")`,
+		bgmidle: `url("${bgMidle.src}")`,
+		bgfour: `url("${bgFour.src}")`,
+		bgfive: `url("${bgFive.src}")`,
+	}}
+>
+
+
+
+	.vale {
+		position: relative;
+		top: 0;
+		background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), var(--bg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
+		height: 80vh;
+		z-index: 1;
+		will-change: transform;
+		}
+
+	.bgtwo {
+		height: 80vh;
+		position: relative;
+		background-image: var(--bgtwo), linear-gradient(#ffc7c1, #f3a4a1);
+		background-size: cover;
+		background-position: center;
+		z-index: 3;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.bgthree {
+		position: relative;
+		top: 0;
+		background: linear-gradient(transparent, rgba(0, 0, 0, 0.5)), var(--bgmidle);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		transform: translateZ(0);
+		backface-visibility: hidden;
+		width: 100%;
+		height: 60vh;
+	}
+
+	
+
+
+	.bgfour {
+		position: relative;
+		background-image: var(--bgfour), linear-gradient(#f3a4a1, #ffc7c1);
+		background-size: cover;
+		background-position: center;
+
+	}
+
+	.bgfive {
+		background-image: var(--bgfive), linear-gradient(#ffc7c1, #f3a4a1);
+		background-size: cover;
+		background-position: center;
+	}
+
+	body {
+		font-family: "poly";
+	}
+
+	.greatvives{
+		font-family: 'Great Vibes', sans-serif;
+	}
+</style>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="og:image" content={ogImage.src}/>
+		<meta name="description" content="Te invito a mis XV años"/>
+		<title>Los XV de Vale</title>
+	</head>
+	<body>
+		<div class="hidden sm:flex sm:bg-[#FFC7C1] sm:justify-center sm:items-center sm:h-screen sm:text-white">
+			<p class="text-4xl text-center">Esta invitación sólo esta disponible para dispositivos móviles</p>
+		</div>
+		<div class="sm:hidden">
+			<div class="containone">
+				<div class="vale">
+					<div
+						class="snap-start snap-always flex flex-col justify-center py-4"
+					>
+						<h2 class="text-center text-white text-2xl">¡Festeja conmigo!</h2>
+						<div class="mx-auto pt-52 pb-28">
+							<img class="" src={XV.src} alt="" />
+							<h2 class="text-center text-white text-2xl">Valentina</h2>
+						</div>
+						<div>
+							<script>
+								function counter(){
+								let targetDate = new Date('2024-02-10T00:00:00'); // Establece la fecha y hora objetivo
+								let interval = setInterval(function(){
+									let currentDate = new Date();
+									let timeDifference = targetDate - currentDate;
+									
+									if (timeDifference <= 0) {
+									clearInterval(interval);
+									document.getElementById("countdown-days").textContent = "00";
+									document.getElementById("countdown-hours").textContent = "00";
+									document.getElementById("countdown-minutes").textContent = "00";
+									document.getElementById("countdown-seconds").textContent = "00";
+									return;
+									}
+							
+									let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+									timeDifference -= days * (1000 * 60 * 60 * 24);
+									let hours = Math.floor(timeDifference / (1000 * 60 * 60));
+									timeDifference -= hours * (1000 * 60 * 60);
+									let minutes = Math.floor(timeDifference / (1000 * 60));
+									timeDifference -= minutes * (1000 * 60);
+									let seconds = Math.floor(timeDifference / 1000);
+							
+									document.getElementById("countdown-days").textContent = days.toString().padStart(2, '0');
+									document.getElementById("countdown-hours").textContent = hours.toString().padStart(2, '0');
+									document.getElementById("countdown-minutes").textContent = minutes.toString().padStart(2, '0');
+									document.getElementById("countdown-seconds").textContent = seconds.toString().padStart(2, '0');
+								}, 1000);
+								}
+							
+								document.addEventListener("DOMContentLoaded", function() {
+								counter();
+								});
+							</script>
+							<div>
+								<p class="text-white text-center my-2">10 de febrero del 2024</p>
+							</div>
+							<div class="flex justify-center">
+								<div class="mx-4 ">
+								<p id="countdown-days" class="countdown-item text-white text-4xl">00</p>
+								<p class="text-white text-center pt-2">Días</p>
+								</div>
+								<div class="mx-4 ">
+								<p id="countdown-hours" class="countdown-item text-white text-4xl">00</p>
+								<p class="text-white text-center pt-2">Hrs</p>
+								</div>
+								<div class="mx-4">
+								<p id="countdown-minutes" class="countdown-item text-white text-4xl">00</p>
+								<p class="text-white text-center pt-2">Min</p>
+								</div>
+								<div class="mx-4 ">
+								<p id="countdown-seconds" class="countdown-item text-white text-4xl">00</p>
+								<p class="text-white text-center pt-2">Seg</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bgtwo w-screen">
+					<div class="text-white text-center mx-8 bgtwoone">
+						<div class="pb-5 pt-10">
+							<h2>
+								Hace XV años me regalaron la vida y una gran
+								familia
+							</h2>
+						</div>
+						<div class="text-center py-5">
+							<h2 class="text-4xl greatvives">Mis papás</h2>
+							<h2>Mario A. Montaño Roldan</h2>
+							<h2>Sonia Torres Campa</h2>
+						</div>
+						<div class="text-center py-5">
+							<h2 class="text-4xl greatvives">Mis padrinos</h2>
+							<h2>Jorge Roldan Rosillo</h2>
+							<h2>Mariana Contreras Castro</h2>
+						</div>
+						<div class="text-center pt-5 pb-10">
+							<h2 class="text-4xl greatvives">Dress code</h2>
+							<h2>
+								De etiqueta. El color rosa blush esta reservado para
+								la festejada
+							</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="containtwo">
+				<div class="bgthree">
+					<div class="snap-start snap-always">
+						<img src={} alt="">
+					</div>
+				</div>
+				<div
+					class="bgfour w-screen h-screen bg-purple-300 snap-start snap-always flex flex-col justify-center"
+				>
+					<div class="text-center text-white mx-8 py-10">
+						<div>
+							<h2 class="text-5xl greatvives">Ceremonía</h2>
+							<p>10 DE FEBRERO | 13:30 hrs</p>
+						</div>
+						<div class="pt-4 pb-4">
+							<p>
+								Parroquia Santa Cruz, plaza Felipe Villanueva s/n Tecámac C.P: 55740
+							</p>
+						</div>
+						<a href="https://maps.app.goo.gl/aMrTqSRUf8b3f5ut5">
+							<div class="bg-[#B77976] w-full py-2 rounded-md">
+								<p>Ir desde maps</p>
+							</div>
+						</a>
+					</div>
+					<div class="text-center text-white mx-8 py-10">
+						<div>
+							<h2 class="text-5xl greatvives">Recepción</h2>
+							<p>10 DE FEBRERO | 15:00 hrs</p>
+						</div>
+						<div class="pt-4 pb-4">
+							<p>
+								Salon de fiestas Katsa en Calle Aldama sin número entre calle Abasolo y Diana Laura Tecámac Estado de México. Cp 55740. 
+							</p>
+						</div>
+						<a href="https://maps.app.goo.gl/dTaMMEJmnAiDfJC29">
+							<div class="bg-[#B77976] w-full py-2 rounded-md">
+								<p>Ir desde maps</p>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="containthree">
+			<div>
+				<video preload="auto" muted autoplay loop  playsinline>
+					<source src="https://pub-c6f56a3478ba4de7a25f81a088d063ba.r2.dev/valentina.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
+				<div
+					class="bgfive w-screen  bg-purple-300 snap-start snap-always flex flex-col"
+				>
+					<div class="text-center text-white mx-8 pb-5 pt-10">
+						<div>
+							<img class="mx-auto" src={liverpool.src} alt="" />
+						</div>
+						<div class="pt-4 pb-4">
+							<p>No. de evento</p>
+							<p>51327990</p>
+						</div>
+						<a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51327990">
+							<div class="bg-[#B77976] w-full py-2 rounded-md">
+								<p>Ver mesa de regalos</p>
+							</div>
+						</a>
+					</div>
+					<div class="text-center text-white mx-8 pb-10 pt-5 ">
+						<div class="pt-4 pb-4 text-white">
+							<p class="text-2xl">Esta invitación incluye</p>
+							<p class="text-[#754C4A] text-2xl">7 boletos</p>
+							<div class="h-px bg-white my-6"></div>
+							<p class="my-6">
+								Hay momentos en la vida que son especiales por
+								si solos, compartirlos con las personas que
+								quieres, los convierte en momentos inolvidables.
+							</p>
+						</div>
+						<a class="pb-4" href="https://wa.link/192ioi">
+							<div
+								class="border-[#764C4A] border-2 w-full py-2 rounded-md flex justify-center"
+							>
+								<img
+									class="mr-2"
+									src={iconWhatsapp.src}
+									alt=""
+								/>
+								<p class="text-[#764C4A]">
+									Confirmar asistencia
+								</p>
+							</div>
+						</a>
+					</div>
+				</div>
+
+		</div>
+	</body>
+</html>
